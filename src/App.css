@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&family=Roboto:wght@300&display=swap");
+:root {
+  --main-color: #ffea00;
+  --heading-color: #cccccc;
+  --text-color: #ffffff;
+  --background-color: #111112;
+  --gradient: linear-gradient(#ffea00, #e9ed4e);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.6rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 6rem;
+}
+
+
+/* Custome for teams */
+.OurCreativeTeam::-webkit-scrollbar {
+  width: 0.6rem;
+}
+.OurCreativeTeam::-webkit-scrollbar-track {
+  background: transparent;
+}
+.OurCreativeTeam::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 6rem;
+}
+/* Custome for teams Ends*/
+
+/* Custome Scroll Bar End */
+*::selection {
+  color: var(--main-color);
+  background: var(--heading-color);
+}
+
+
+.MainNav{
+  font-family: "Montserrat", sans-serif;
+}
+
+.navLinks li {
+  position: relative;
+}
+
+.navLinks a::after{
+   content: "";
+  width: 0%;
+  height: 3px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: 0.5s;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+footer{
+  font-family: "Poppins";
+}
+
+.contactForm{
+  font-family: "Poppins";
+}
+
+.TeamCards{
+    font-family: "Poppins";
+}
+
+.headings{
+  font-family: "Poppins";
+}
+
+.subHeadings{
+  font-family: "Segoe UI";
+}
+
+.icon{
+  font-size: 50px;
+}
+
+section{
+  padding: 0px 40px;
+}
+
+
+.glow-on-hover {
+  transition: filter 0.5s; /* Add a transition for the filter property */
+}
+
+.glow-on-hover:hover {
+  animation: glow 1s infinite; /* Apply the glow animation on hover */
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 2.5px #ffea00); /* Initial filter style */
+  }
+  50% {
+    filter: drop-shadow(0 0 5px #ffea00); /* Larger glow at 50% of the animation */
+  }
+  100% {
+    filter: drop-shadow(0 0 2.5px #ffea00); /* Return to the initial filter style */
+  }
+}
