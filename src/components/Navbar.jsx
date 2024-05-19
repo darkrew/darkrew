@@ -26,7 +26,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 h-20 bg-[var(--background-color)] MainNav">
+    <nav className="sticky top-0 z-50 h-20 bg-[var(--background-color)] MainNav overflow-hidden">
       <div className="max-w-6xl">
         <div className="flex justify-between">
           <div className="flex space-x-4">
@@ -35,11 +35,13 @@ function Navbar() {
                 className="flex items-center -ml-2 md:px-12 py-5 text-gray-700 hover:text-gray-900"
                 to="/"
               >
-                <img
-                  className="w-32 -translate-y-12 "
-                  src="/Images/Logo/DK-01.png"
-                  alt=""
-                />
+                <div className="w-32 h-32 overflow-hidden">
+                  <img
+                    className="w-full h-full object-cover -translate-y-12"
+                    src="/Images/Logo/DK-01.jpg"
+                    alt="Logo"
+                  />
+                </div>
               </NavLink>
             </div>
             <div className="hidden -translate-y-9 text-[var(--text-color)] md:flex items-center space-x-1">

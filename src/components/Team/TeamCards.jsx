@@ -1,39 +1,35 @@
-import React from 'react'
-import {AiFillInstagram} from 'react-icons/ai'
-import {AiFillLinkedin} from 'react-icons/ai'
-import {FaSquareXTwitter} from 'react-icons/fa6'
+import React from "react";
+import { AiFillInstagram } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
-function TeamCards({
-    name, profession, occupation, link
-}) {
+function TeamCards({ name, profession, occupation, link }) {
   return (
-    <div>
-
-
-       
-<div class="TeamCards w-[20rem] h-[25rem] sm:w[20rem] p-4  bg-[#ccc] border border-gray-200 rounded-lg shadow">
-
-    <div class="flex flex-col items-center">
-        <img class="w-48 h-48 xl:w-56 xl:h-56 mb-3 rounded-full shadow-lg" src="/Images/Avatar.png" alt="Bonnie image"/>
-    </div>
-        <div className="text-start mt-4">
-            <h5 class="text-xl text-[var(--background-color)] text-[25px] font-semibold">{name}</h5>
+    <div className="relative px-10">
+      <div className="max-w-md h-[32rem] bg-white rounded-lg shadow-lg">
+        <a href="#">
+          <img
+            className="rounded-t-lg overflow-hidden w-[21rem]"
+            src="./Images/Avatar.png"
+            alt=""
+          />
+        </a>
+        <div className="p-5 flex justify-between relative">
+          <div className="bg-[var(--main-color)] custom-team-occupation-border px-8 text-white absolute left-0 top-24 md:top-12">
+            <p className="headings">{occupation}</p>
+          </div>
+          <div className="bg-[var(--main-color)] border border-white text-white custom-team-profession-border drop-shadow-lg px-8 absolute right-0 top-12">
+            <p className="headings font-extralight">{profession}</p>
+          </div>
         </div>
-    <div className="flex justify-start flex-col">
-         <span class="text-sm text-gray-500">{occupation}</span>
-        <span class="text-sm text-gray-500">{profession}</span>
-       </div>
-    <div class="flex justify-end mt-4 space-x-3 md:mt-6">
-             <a href="" target='__blank' className='text-2xl'><AiFillInstagram/></a>
-             <a href="" target='__blank' className='text-2xl'><AiFillLinkedin/></a>
-             <a href="" target='__blank' className='text-2xl'><FaSquareXTwitter/></a>
+        <div className="absolute bottom-0 left-[30%] flex gap-3 p-5">
+          <AiFillInstagram size={37} />
+          <AiFillLinkedin size={37} />
+          <FaSquareXTwitter size={35} />
         </div>
-</div>
-
-
-
+      </div>
     </div>
-  )
+  );
 }
 
-export default TeamCards
+export default TeamCards;
