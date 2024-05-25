@@ -9,16 +9,16 @@ function TeamCards({ name, profession, occupation, link }) {
       <div className="max-w-md h-[32rem] bg-white rounded-lg shadow-lg">
         <a href="#">
           <img
-            className="rounded-t-lg overflow-hidden w-[21rem]"
+            className="rounded-t-lg overflow-hidden w-[18rem] md:w-[21rem]"
             src="./Images/Avatar.png"
             alt=""
           />
         </a>
         <div className="p-5 flex justify-between relative">
-          <div className="bg-[var(--main-color)] custom-team-occupation-border px-8 text-white absolute left-0 top-24 md:top-12">
+          <div className="bg-[var(--main-color)] custom-team-occupation-border px-8 py-1 text-white absolute left-0 top-24 md:top-12">
             <p className="headings">{occupation}</p>
           </div>
-          <div className="bg-[var(--main-color)] border border-white text-white custom-team-profession-border drop-shadow-lg px-8 absolute right-0 top-12">
+          <div className="bg-[var(--main-color)] border border-white text-white custom-team-profession-border drop-shadow-lg px-8 py-1 absolute right-0 top-12">
             <p className="headings font-extralight">{profession}</p>
           </div>
         </div>

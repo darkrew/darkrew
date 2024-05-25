@@ -18,7 +18,7 @@ function ContactUs() {
             important to us. We're here to help!
           </p>
         </div>
-        <div className=" mb-24 max-w-screen-xl mt-16 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-[#ccc] text-[var(--background-color)] rounded-lg shadow-lg">
+        <div className=" mb-24 max-w-screen-xl mt-16 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-[var(--main-color)] text-[var(--background-color)] rounded-lg shadow-lg">
           <div className="flex flex-col justify-between">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
@@ -39,9 +39,9 @@ function ContactUs() {
                 Full Name *
               </span>
               <input
-                className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="text"
-                placeholder=""
+                placeholder="Your Full Name"
               />
             </div>
             <div className="mt-8">
@@ -49,18 +49,22 @@ function ContactUs() {
                 Email *
               </span>
               <input
-                className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="text"
+                placeholder="Enter Your Email"
               />
             </div>
             <div className="mt-8">
               <span className="uppercase text-sm text-gray-600 font-bold">
                 Message *
               </span>
-              <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+              <textarea
+                placeholder="Message"
+                className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              ></textarea>
             </div>
             <div className="mt-8">
-              <button className="uppercase text-lg font-bold tracking-wide border border-[var(--main-color)] text-[var(--background-color)] bg-[var(--main-color)] hover:bg-[#ccc] text-[#121212] duration-200 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+              <button className="uppercase text-lg font-bold tracking-wide border border-[var(--main-color)] text-[#121212] bg-gray-100 hover:bg-[var(--main-color)] hover:border-black hover:text-gray-100 duration-200 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                 Send Message
               </button>
             </div>

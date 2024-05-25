@@ -9,7 +9,7 @@ function Team() {
     <>
       <section className="bg-[var(--background-color)] h-[100%] px-0" id="team">
         <div className="text-center">
-          <h1 className="text-[var(--heading-color)] headings font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          <h1 className="text-[var(--heading-color)] headings font-bold text-2xl md:text-2xl lg:text-5xl">
             Our <span className="text-[var(--main-color)]">Creative</span> Team
           </h1>
           <p className="text-[var(--text-color)] subHeadings text-center sm:mx-32 sm:px-1 px-8 text-xl sm:text-xl xl:text-2xl">
