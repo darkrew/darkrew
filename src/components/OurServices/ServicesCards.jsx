@@ -11,7 +11,7 @@ function ServicesCards({ svg, title, description }) {
       <h3 className="mb-2 text-md font-bold text-[var(--main-color)] uppercase headings  text-center md:text-start lg:text-lg xl:text-xl">
         {title}
       </h3>
-      <p className="text-[var(--text-color)] subHeadings xl:text-lg text-justify lg:text-start">
+      <p className="text-[var(--text-color)] subHeadings xl:text-lg text-center lg:text-start">
         {description}
       </p>
     </div>
