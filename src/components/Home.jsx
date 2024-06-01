@@ -4,7 +4,7 @@ import ContactModal from "./Modals/ContactModal";
 function Home({ heading, paragraph }) {
   return (
     <>
-      <section className="px-8 md:px-20" id="home">
+      <section className="px-8 md:px-12" id="home">
         <div className="md:grid md:grid-cols-2 ">
           <div className="h-[100%] flex justify-center flex-col">
             <h1 className="mb-2 md:mb-10 text-[var(--heading-color)] headings mt-10 font-bold text-2xl sm:text-xl md:text-2xl lg:text-5xl">

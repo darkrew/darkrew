@@ -54,7 +54,7 @@ function OurServices() {
             />
             <div className="relative h-[100%] w-[100%] flex justify-end items-center">
               <Link to={"/"}>
-                <p className="custom-border-box headings absolute bg-[var(--main-color)] text-white font-bold w-max left-1 mt-5 md:mt-0 md:left-[33%] lg:left-[48%] px-12 py-3">
+                <p className="custom-border-box headings absolute bg-[var(--main-color)] text-white font-bold w-max left-1 mt-5 md:mt-0 md:left-[30%] lg:left-[48%] px-12 py-3">
                   Explore Our Courses
                 </p>
               </Link>

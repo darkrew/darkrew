@@ -27,26 +27,24 @@ function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 h-20 bg-[var(--background-color)] MainNav overflow-hidden">
+      <nav className="sticky top-0 z-50 h-20 mb-20 bg-[var(--background-color)] MainNav overflow-hidden">
         <div className="max-w-6xl">
-          <div className="flex justify-between">
-            <div className="flex space-x-4">
-              <div>
-                <NavLink
-                  className="flex items-center -ml-2 md:px-12 py-5 text-gray-700 hover:text-gray-900"
-                  to="/"
-                >
-                  <div className="w-32 h-32 overflow-hidden">
-                    <img
-                      className="w-full h-full object-cover -translate-y-12"
-                      src="/Images/Logo/DK-01.jpg"
-                      alt="Logo"
-                    />
-                  </div>
-                </NavLink>
-              </div>
+          <div className="">
+            <div className="flex justify-between items-center">
+              <NavLink
+                className="flex md:px-2 py-10 md:py-6 text-gray-700 hover:text-gray-900"
+                to="/"
+              >
+                <div className="w-28 h-28 lg:w-36 lg:h-36">
+                  <img
+                    className="w-full h-full object-cover -translate-y-12"
+                    src="/Images/Logo/DK-01.png"
+                    alt="Logo"
+                  />
+                </div>
+              </NavLink>
               <div className="hidden -translate-y-9 text-[var(--text-color)] md:flex items-center space-x-1">
-                <ul className="navLinks text-[14px] lg:text-[20px] md:-translate-x-16 font-bold flex flex-row gap-5 lg:gap-5">
+                <ul className="navLinks mb-10 text-[14px] lg:text-[18px] md:-translate-x-16 font-bold flex flex-row gap-5 lg:gap-8">
                   <li>
                     <NavLink
                       to=""
@@ -109,6 +107,9 @@ function Navbar() {
                   </li>
                 </ul>
               </div>
+              {/* <div className="">
+                <button>Sign</button>
+              </div> */}
             </div>
 
             <div className="md:hidden -translate-y-10 -translate-x-5 lg:hidden xl:hidden flex ">
