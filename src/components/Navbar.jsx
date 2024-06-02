@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+// import Hamburger from "hamburger-react";
+import { Sling as Hamburger } from "hamburger-react";
 
 function Navbar() {
+  const GoHome = () => {
+    window.location.href = "/";
+  };
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -9,14 +15,14 @@ function Navbar() {
     }
   };
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setOpen(!isOpen);
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
+    setOpen(false);
 
     // Scroll to the services section
     const servicesSection = document.getElementById("services");
@@ -27,135 +33,118 @@ function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 h-20 mb-20 bg-[var(--background-color)] MainNav overflow-hidden">
-        <div className="max-w-6xl">
-          <div className="">
-            <div className="flex justify-between items-center">
-              <NavLink
-                className="flex md:px-2 py-10 md:py-6 text-gray-700 hover:text-gray-900"
-                to="/"
-              >
-                <div className="w-28 h-28 lg:w-36 lg:h-36">
-                  <img
-                    className="w-full h-full object-cover -translate-y-12"
-                    src="/Images/Logo/DK-01.png"
-                    alt="Logo"
-                  />
-                </div>
-              </NavLink>
-              <div className="hidden -translate-y-9 text-[var(--text-color)] md:flex items-center space-x-1">
-                <ul className="navLinks mb-10 text-[14px] lg:text-[18px] md:-translate-x-16 font-bold flex flex-row gap-5 lg:gap-8">
-                  <li>
-                    <NavLink
-                      to=""
-                      href="#home"
-                      onClick={() => scrollToSection("home")}
-                    >
-                      Home
-                    </NavLink>
-                  </li>
-                  <li>
-                    <a href="#services">Services</a>
-                  </li>
-                  <li>
-                    <NavLink
-                      className={({ isActive }) =>
-                        `${
-                          isActive
-                            ? "text-[var(--main-color)]"
-                            : "text-[var(--text-color)]"
-                        }`
-                      }
-                      to="/ourwork"
-                    >
-                      Courses
-                    </NavLink>
-                  </li>
-                  <li>
-                    <a href="#whyUs">Why Us</a>
-                  </li>
-                  {/* <li>
-                  <NavLink
-                    className={({ isActive }) =>
-                      `${
-                        isActive
-                          ? "text-[var(--main-color)]"
-                          : "text-[var(--text-color)]"
-                      }`
-                    }
-                    to="/team"
-                  >
-                    Team
-                  </NavLink>
-                </li> */}
-                  <li>
-                    <NavLink to={"/contact-us"}>Contact Us</NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className={({ isActive }) =>
-                        `${
-                          isActive
-                            ? "text-[var(--main-color)]"
-                            : "text-[var(--text-color)]"
-                        }`
-                      }
-                      to="/aboutus"
-                    >
-                      About Us
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
-              {/* <div className="">
-                <button>Sign</button>
-              </div> */}
-            </div>
-
-            <div className="md:hidden -translate-y-10 -translate-x-5 lg:hidden xl:hidden flex ">
-              <button className="mobile-menu-button" onClick={toggleMenu}>
-                {isMenuOpen ? (
-                  // Render the "X" icon when the menu is open
-                  <svg
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  // Render the hamburger icon when the menu is closed
-                  <svg
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </button>
-            </div>
+      <nav className="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 h-[5rem]">
+        <div className="px-3 flex flex-wrap items-center justify-between mx-auto h-full">
+          <a href="https://flowbite.com/" className="flex items-center h-full">
+            <img
+              src="/Images/Logo/DK-01.png"
+              className="max-h-36"
+              alt="Darkrew Logo"
+            />
+          </a>
+          <div className="flex md:order-2 space-x-3 md:space-x-0">
+            <button
+              type="button"
+              className="text-white bg-[var(--main-color)] focus:ring-4 focus:outline-none focus:ring-[var(--main-color)] font-bold rounded-lg text-sm px-8 py-2 text-center"
+            >
+              Join Us
+            </button>
+            <button
+              onClick={toggleMenu}
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              className="inline-flex items-center w-10 h-10 justify-center text-[var(--text-color)] rounded-lg md:hidden"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              <Hamburger toggled={isOpen} toggle={setOpen} />
+            </button>
+          </div>
+          <div
+            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 h-full"
+            id="navbar-sticky"
+          >
+            <ul className="navLinks flex flex-col p-4 md:p-0 mt-4 text-lg border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+              <li>
+                <NavLink
+                  to={"/"}
+                  onClick={GoHome}
+                  className="block py-2 px-3 text-black rounded md:bg-transparent md:p-0"
+                  aria-current="page"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 px-3 text-black rounded md:bg-transparent md:p-0 active"
+                      : "block py-2 px-3 text-black rounded md:bg-transparent md:p-0"
+                  }
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <NavLink
+                  to={"/courses"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 px-3 text-black rounded md:bg-transparent md:p-0 active"
+                      : "block py-2 px-3 text-black rounded md:bg-transparent md:p-0"
+                  }
+                >
+                  Courses
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/why-choose-us"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 px-3 text-black rounded md:bg-transparent md:p-0 active"
+                      : "block py-2 px-3 text-black rounded md:bg-transparent md:p-0"
+                  }
+                >
+                  Why Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/contact-us"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 px-3 text-black rounded md:bg-transparent md:p-0 active"
+                      : "block py-2 px-3 text-black rounded md:bg-transparent md:p-0"
+                  }
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/aboutus"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 px-3 text-black rounded md:bg-transparent md:p-0 active"
+                      : "block py-2 px-3 text-black rounded md:bg-transparent md:p-0"
+                  }
+                >
+                  About Us
+                </NavLink>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
+
       <div className="duration-300">
-        {isMenuOpen && (
+        {isOpen && (
           <div
-            className={`mobile-menu duration-300 bg-[var(--main-color)] p-4 h-full w-screen z-50 fixed text-[var(--text-color)] focus:none`}
+            className={`mobile-menu duration-300 bg-[var(--main-color)] p-4 h-screen w-screen z-50 fixed text-[var(--text-color)] mt-1 focus:none`}
           >
             <NavLink
               to="/"
@@ -185,13 +174,6 @@ function Navbar() {
             >
               Why Us
             </a>
-            {/* <NavLink
-          to="/team"
-          className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
-          onClick={closeMenu}
-        >
-          Team
-        </NavLink> */}
             <NavLink
               className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
               onClick={closeMenu}

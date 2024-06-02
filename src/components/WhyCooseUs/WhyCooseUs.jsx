@@ -1,17 +1,23 @@
-import React from "react";
+import transition from "../../transition";
+import React, { useEffect } from "react";
 import Card from "./Card";
 import Innovation from "./svg/Innovation";
 import ClientApproach from "./svg/ClientApproach";
 import Record from "./svg/Record";
 import { NavLink } from "react-router-dom";
+import Footer from "../Footer";
+import ContactUs from "../Contact/ContactUs";
 
 function WhyCooseUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
-      <section className="pb-16" id="whyUs">
+      <section className=" mt-20" id="whyUs">
         <div className="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6">
           <div className="text-center mb-8 lg:mb-16">
-            <h2 className="mb-4 headings text-[var(--heading-color)] tracking-tight font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+            <h2 className="mb-4 headings text-[var(--text-color)] tracking-tight font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               Why <span className="text-[var(--main-color)]">Choose</span> Us
             </h2>
             <p className="text-[var(--text-color)] subHeadings text-lg sm:text-lg text-start xl:text-2xl">
@@ -47,8 +53,10 @@ function WhyCooseUs() {
           </NavLink>
         </div>
       </section>
+      <ContactUs />
+      <Footer />
     </div>
   );
 }
 
-export default WhyCooseUs;
+export default transition(WhyCooseUs);

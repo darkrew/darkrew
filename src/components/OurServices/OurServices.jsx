@@ -12,7 +12,7 @@ function OurServices() {
   return (
     <>
       <section className=" pb-16" id="services">
-        <div className="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6">
+        <div className="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-3">
           <div className="text-center mb-8 lg:mb-16">
             <h2 className="mb-4  headings text-[var(--heading-color)] tracking-tight font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               Let's <span className="text-[var(--main-color)]">Build</span>{" "}
@@ -52,12 +52,48 @@ function OurServices() {
               title="Custom Services"
               description="Your Vision, Our Expertise: We deliver custom solutions that cater to your every need. Experience tailored excellence with us, where your satisfaction is our top priority. Elevate your business with custom services that redefine success."
             />
-            <div className="relative h-[100%] w-[100%] flex justify-end items-center">
+            {/* <div className="flex justify-end items-center md:order-2 space-x-3 md:space-x-12">
               <Link to={"/"}>
-                <p className="custom-border-box headings absolute bg-[var(--main-color)] text-white font-bold w-max left-1 mt-5 md:mt-0 md:left-[30%] lg:left-[48%] px-12 py-3">
+                <p className="custom-border-box headings bg-[var(--main-color)] text-white font-bold w-max mt-5 md:mt-0 px-12 py-3">
                   Explore Our Courses
                 </p>
               </Link>
+            </div> */}
+
+            <div class="max-w-sm p-6 custom-gradient border border-gray-200 rounded-lg shadow flex justify-center items-start mt-10 md:mt0 flex-col">
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
+                  Explore Our Best Courses
+                </h5>
+              </a>
+              <p class="mb-3 font-normal text-white text-lg">
+                Discover a diverse range of top-tier courses designed to enhance
+                your skills and knowledge. Whether you're looking to advance
+                your career or explore new interests, our expert-led courses
+                offer unparalleled learning experiences.
+              </p>
+
+              <a
+                href="#"
+                class=" mt-4 duration-75 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-[var(--main-color)] hover:border hover:text-white ring-[var(--main-color)] focus:ring-4"
+              >
+                Explore Now
+                <svg
+                  class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

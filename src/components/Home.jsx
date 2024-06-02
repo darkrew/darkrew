@@ -1,11 +1,12 @@
 import React from "react";
 import ContactModal from "./Modals/ContactModal";
+import transition from "../transition";
 
 function Home({ heading, paragraph }) {
   return (
     <>
-      <section className="px-8 md:px-12" id="home">
-        <div className="md:grid md:grid-cols-2 ">
+      <section className="mt-24 md:px-12" id="home">
+        <div className="md:grid md:grid-cols-2 gap-20">
           <div className="h-[100%] flex justify-center flex-col">
             <h1 className="mb-2 md:mb-10 text-[var(--heading-color)] headings mt-10 font-bold text-2xl sm:text-xl md:text-2xl lg:text-5xl">
               Where <span className="text-[var(--main-color)]">Ideas</span> Take
@@ -27,7 +28,6 @@ function Home({ heading, paragraph }) {
           <div className="h-[100%] hidden lg:block">
             <div className="flex justify-between">
               <div className="bg-[var(--main-color)] h-48 w-48 rounded-full"></div>
-              {/* <div className="bg-[var(--main-color)] h-48 w-48 rounded-full z-50"></div> */}
               <div className="bg-[var(--main-color)] h-48 w-48 rounded-full"></div>
             </div>
             <div className="flex">
@@ -41,4 +41,4 @@ function Home({ heading, paragraph }) {
   );
 }
 
-export default Home;
+export default transition(Home);

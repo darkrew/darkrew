@@ -13,12 +13,14 @@ import Team from "./components/Team/Team.jsx";
 import ContactUs from "./components/Contact/ContactUs.jsx";
 import OurWork from "./components/OurWork/OurWork.jsx";
 import AboutUs from "./components/AboutUs/AboutUs.jsx";
+import WhyCooseUs from "./components/WhyCooseUs/WhyCooseUs.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<App />} />
       <Route path="/team" element={<Team />} />
+      <Route path="/why-choose-us" element={<WhyCooseUs />} />
       <Route path="/ourwork" element={<OurWork />} />
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/aboutus" element={<AboutUs />} />

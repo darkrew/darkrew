@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../Footer";
+import transition from "../../transition";
 
 function ContactUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section
-        className="px-8 pb-4 h-full w-full bg-[var(--background-color)]"
+        className="px-8 pb-4 mt-32 h-full w-full bg-[var(--background-color)]"
         id="contactus"
       >
         <div className="text-center w-full contactForm">
@@ -75,4 +79,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default transition(ContactUs);

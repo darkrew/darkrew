@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import ContactIcons from "./components/Contact/ContactIcons";
 import ContactUs from "./components/Contact/ContactUs";
@@ -12,10 +13,11 @@ import WhyCooseUs from "./components/WhyCooseUs/WhyCooseUs";
 function App() {
   return (
     <>
-      <div className="Main bg-[var(--background-color)] h-[100%] max-w-full">
+      <div className="Main bg-[var(--background-color)] mt-20 h-[100%] max-w-full">
         <Home />
         <OurServices />
         <Team />
+        {/* <WhyCooseUs /> */}
         <ContactUs />
         <ContactIcons />
         <Footer />
