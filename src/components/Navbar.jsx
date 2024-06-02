@@ -144,7 +144,7 @@ function Navbar() {
       <div className="duration-300">
         {isOpen && (
           <div
-            className={`mobile-menu duration-300 bg-[var(--main-color)] p-4 h-screen w-screen z-50 fixed text-[var(--text-color)] mt-1 focus:none`}
+            className={`mobile-menu duration-300 opacity-100 bg-[var(--main-color)] p-4 h-screen w-screen z-50 fixed text-[var(--text-color)] focus:none`}
           >
             <NavLink
               to="/"
