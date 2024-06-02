@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 // import Hamburger from "hamburger-react";
 import { Sling as Hamburger } from "hamburger-react";
 
 function Navbar() {
+  const navigate = useNavigate();
+
   const GoHome = () => {
     window.location.href = "/";
   };
+  const GoHomeServices = () => {
+    window.location.href = "/#services";
+    window.scroll(0, 12);
+  };
+  useEffect(() => {
+    GoHomeServices();
+  }, []);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -34,7 +43,7 @@ function Navbar() {
   return (
     <>
       <nav className="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 h-[5rem]">
-        <div className="px-3 flex flex-wrap items-center justify-between mx-auto h-full">
+        <div className="pr-6 flex flex-wrap items-center justify-between mx-auto h-full">
           <NavLink
             to={"/"}
             onClick={GoHome}
@@ -83,6 +92,7 @@ function Navbar() {
               <li>
                 <a
                   href="#services"
+                  onClick={GoHomeServices}
                   className={({ isActive }) =>
                     isActive
                       ? "block py-2 px-3 text-black rounded md:bg-transparent md:p-0 active"
@@ -157,13 +167,13 @@ function Navbar() {
             >
               Home
             </NavLink>
-            <NavLink
-              to={"/"}
+            <a
+              href="/#services"
               className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
-              onClick={closeMenu}
+              onClick={(closeMenu, GoHomeServices)}
             >
               Services
-            </NavLink>
+            </a>
             <NavLink
               to="/ourwork"
               className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"

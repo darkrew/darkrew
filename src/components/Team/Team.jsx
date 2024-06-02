@@ -12,10 +12,9 @@ function Team() {
           <h1 className="text-[var(--heading-color)] headings font-bold text-2xl md:text-2xl lg:text-5xl">
             Our <span className="text-[var(--main-color)]">Creative</span> Team
           </h1>
-          <p className="text-[var(--text-color)] subHeadings text-center sm:mx-32 sm:px-1 px-8 text-xl sm:text-xl xl:text-2xl">
+          <p className="text-[var(--text-color)] subHeadings text-center sm:mx-52 sm:px-1 px-8 text-xl sm:text-xl xl:text-2xl">
             Where Innovation Meets Imagination. Our creative software
-            development team transforms ideas into{" "}
-            <br className="hidden md:block" /> stunning digital realities,
+            development team transforms ideas into stunning digital realities,
             crafting captivating user experiences that leave a lasting
             impression.
           </p>

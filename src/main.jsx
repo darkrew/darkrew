@@ -14,6 +14,7 @@ import ContactUs from "./components/Contact/ContactUs.jsx";
 import OurWork from "./components/OurWork/OurWork.jsx";
 import AboutUs from "./components/AboutUs/AboutUs.jsx";
 import WhyCooseUs from "./components/WhyCooseUs/WhyCooseUs.jsx";
+import Courses from "./components/Courses/Courses.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path="" element={<App />} />
       <Route path="/team" element={<Team />} />
       <Route path="/why-choose-us" element={<WhyCooseUs />} />
+      <Route path="/courses" element={<Courses />} />
       <Route path="/ourwork" element={<OurWork />} />
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/aboutus" element={<AboutUs />} />
