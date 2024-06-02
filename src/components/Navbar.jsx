@@ -1,21 +1,45 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 // import Hamburger from "hamburger-react";
 import { Sling as Hamburger } from "hamburger-react";
 
 function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const GoHome = () => {
     window.location.href = "/";
   };
+  const [scrollToServices, setScrollToServices] = useState(false);
+
   const GoHomeServices = () => {
-    window.location.href = "/#services";
-    window.scroll(0, 12);
+    if (location.pathname === "/") {
+      // If already on the home page, scroll directly
+      scrollToServicesSection();
+    } else {
+      // Navigate to home and set the flag to scroll after navigation
+      setScrollToServices(true);
+      window.location.href = "/";
+    }
+    closeMenu();
   };
+
   useEffect(() => {
-    GoHomeServices();
-  }, []);
+    if (scrollToServices && location.pathname === "/#services") {
+      scrollToServicesSection();
+      setScrollToServices(false); // Reset the flag
+    }
+  }, [location.pathname, scrollToServices]);
+
+  const scrollToServicesSection = () => {
+    const element = document.getElementById("services");
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);

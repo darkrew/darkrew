@@ -19,7 +19,7 @@ import Courses from "./components/Courses/Courses.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path="" element={<App />} />
+      <Route index path="" element={<App />} />
       <Route path="/team" element={<Team />} />
       <Route path="/why-choose-us" element={<WhyCooseUs />} />
       <Route path="/courses" element={<Courses />} />
