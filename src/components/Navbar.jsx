@@ -149,7 +149,7 @@ function Navbar() {
             <NavLink
               to="/"
               className="block py-2 px-4 text-2xl text-white hover:bg-[var(--text-color)] hover:text-[var(--background-color)] duration-200"
-              onClick={closeMenu}
+              onClick={(closeMenu, GoHome)}
             >
               Home
             </NavLink>
@@ -167,13 +167,13 @@ function Navbar() {
             >
               Courses
             </NavLink>
-            <a
-              href="#whyus"
+            <NavLink
+              to={"/why-choose-us"}
               className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
               onClick={closeMenu}
             >
               Why Us
-            </a>
+            </NavLink>
             <NavLink
               className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
               onClick={closeMenu}
