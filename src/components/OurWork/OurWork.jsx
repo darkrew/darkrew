@@ -2,6 +2,7 @@ import React from "react";
 import ContactUs from "../Contact/ContactUs";
 import Footer from "../Footer";
 import ContactModal from "../Modals/ContactModal";
+import transition from "../../transition";
 
 function OurWork() {
   return (
@@ -49,4 +50,4 @@ function OurWork() {
   );
 }
 
-export default OurWork;
+export default transition(OurWork);

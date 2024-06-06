@@ -13,7 +13,7 @@ function ContactUs() {
         id="contactus"
       >
         <div className="text-center w-full contactForm">
-          <h1 className="headings text-[#ccc] mb-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          <h1 className="headings text-[var(--heading-color)] mb-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             Send <span className="text-[var(--main-color)] ">Your</span> Inquiry
           </h1>
           <p className="text-[var(--text-color)] subHeadings text-lg sm:text-lg text-center xl:text-2xl">
@@ -43,6 +43,7 @@ function ContactUs() {
                 Full Name *
               </span>
               <input
+                style={{ border: "none" }}
                 className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Your Full Name"
@@ -53,6 +54,7 @@ function ContactUs() {
                 Email *
               </span>
               <input
+                style={{ border: "none" }}
                 className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Enter Your Email"
@@ -63,12 +65,13 @@ function ContactUs() {
                 Message *
               </span>
               <textarea
+                style={{ border: "none" }}
                 placeholder="Message"
                 className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               ></textarea>
             </div>
             <div className="mt-8">
-              <button className="uppercase text-lg font-bold tracking-wide border border-[var(--main-color)] text-[#121212] bg-gray-100 hover:bg-[var(--main-color)] hover:border-black hover:text-gray-100 duration-200 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+              <button className="uppercase text-lg font-bold tracking-wide border border-[var(--main-color)] text-[#121212] bg-gray-100 hover:bg-[var(--heading-color)] hover:text-gray-100 duration-75 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                 Send Message
               </button>
             </div>

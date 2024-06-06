@@ -20,7 +20,7 @@ function AboutUs() {
           <div className="h-[100%] flex justify-center flex-col">
             <h1 className="mb-10 text-[var(--heading-color)] headings mt-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               <span className="text-[var(--main-color)]">About</span>{" "}
-              <span className="text-[var(--text-color)]">Us</span>
+              <span className="text-[var(--heading-color)]">Us</span>
             </h1>
             <h1 className="text-[var(--text-color)] text-xl mb-10 sm:mb-0 sm:text-xl xl:text-2xl">
               At Darkrew, we are a gathering of visionary thinkers and

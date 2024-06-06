@@ -22,7 +22,7 @@ function ContactIcons() {
             </p>
           </div>
           <div className="text-center w-full contactForm">
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl text-[var(--text-color)] mt-16">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl text-[var(--heading-color)] mt-16">
               We Are Social
             </h1>
           </div>

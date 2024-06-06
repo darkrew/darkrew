@@ -16,13 +16,13 @@ function Footer() {
           <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0 hidden lg:block">
-                <a href="#home" className="flex items-center">
+                <a className="flex items-center">
                   <img
                     src="/Images/Logo/DK-01.jpg"
                     className=" w-32 mr-3"
                     alt="FlowBite Logo"
                   />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap text-[var(--text-color)] ">
+                  <span className="self-center text-2xl font-semibold whitespace-nowrap text-[var(--heading-color)] ">
                     Darkrew
                   </span>
                 </a>
@@ -35,12 +35,12 @@ function Footer() {
                   <ul className="text-[var(--text-color)] leading-4 font-medium">
                     <li className="mb-4">
                       <a href="" className="hover:underline">
-                        What we do
+                        Courses
                       </a>
                     </li>
                     <li className="mb-4">
                       <a href="" className="hover:underline">
-                        Portfolio
+                        Why Us
                       </a>
                     </li>
                     <li className="mb-4">
@@ -53,11 +53,11 @@ function Footer() {
                         Careers
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href="" className="hover:underline">
                         Hire Form Us
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <div>

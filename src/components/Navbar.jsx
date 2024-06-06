@@ -71,7 +71,7 @@ function Navbar() {
           <NavLink
             to={"/"}
             onClick={GoHome}
-            className="flex items-center h-full"
+            className="flex items-center h-full -ml-4"
           >
             <img
               src="/Images/Logo/DK-01.png"

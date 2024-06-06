@@ -17,10 +17,10 @@ function WhyCooseUs() {
       <section className=" mt-20" id="whyUs">
         <div className="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6">
           <div className="text-center mb-8 lg:mb-16">
-            <h2 className="mb-4 headings text-[var(--text-color)] tracking-tight font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+            <h2 className="mb-4 headings text-[var(--heading-color)] tracking-tight font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               Why <span className="text-[var(--main-color)]">Choose</span> Us
             </h2>
-            <p className="text-[var(--text-color)] subHeadings text-lg sm:text-lg text-start xl:text-2xl">
+            <p className="text-[var(--text-color)] w-full px-0 md:px-32 text-center subHeadings text-lg sm:text-lg xl:text-2xl">
               Choose Excellence: Collaborate with us for unmatched expertise,
               innovation, and dedication. We're committed to delivering
               exceptional results and fostering a partnership that fuels your
