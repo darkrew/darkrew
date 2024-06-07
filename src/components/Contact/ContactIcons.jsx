@@ -22,44 +22,32 @@ function ContactIcons() {
             </p>
           </div>
           <div className="text-center w-full contactForm">
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl text-[var(--heading-color)] mt-16">
+            <h1 className="text-2xl lg:text-3xl xl:text-4xl text-[var(--heading-color)] mt-16">
               We Are Social
             </h1>
           </div>
-          <div className="flex flex-wrap sm:gap-20 gap-8 text-center justify-center items-center w-full text-[var(--main-color)] text-lg">
-            <a
-              href="#"
-              target="__blank"
-              className="mt-12 text-3xl xl:text-5xl lg:text-4xl"
-            >
+          <div className="flex flex-wrap sm:gap-20 gap-8 text-center justify-center items-center w-full text-[var(--main-color)] text-xl">
+            <a href="#" target="__blank" className="mt-12 text-3xl md:text-4xl">
               <GrFacebookOption />
             </a>
             <a
               href="https://instagram.com/darkrewpk"
               target="__blank"
-              className="mt-12 text-3xl xl:text-5xl lg:text-4xl"
+              className="mt-12 text-3xl md:text-4xl"
             >
               <BsInstagram />
             </a>
             <a
               href="https://www.linkedin.com/company/darkrew/"
               target="__blank"
-              className="mt-12 text-3xl xl:text-5xl lg:text-4xl"
+              className="mt-12 text-3xl md:text-4xl"
             >
               <AiFillLinkedin />
             </a>
-            <a
-              href="#"
-              target="__blank"
-              className="mt-12 text-3xl xl:text-5xl lg:text-4xl"
-            >
+            <a href="#" target="__blank" className="mt-12 text-3xl md:text-4xl">
               <RiTwitterXFill />
             </a>
-            <a
-              href="#"
-              target="__blank"
-              className="mt-12 text-3xl xl:text-5xl lg:text-4xl"
-            >
+            <a href="#" target="__blank" className="mt-12 text-3xl md:text-4xl">
               <BsBehance />
             </a>
           </div>
