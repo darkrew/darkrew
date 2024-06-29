@@ -38,12 +38,15 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="right flex justify-center items-center mt-10 md:mt-0">
+            <div
+              style={{ textTransform: "uppercase" }}
+              className="right flex justify-center items-center mt-10 md:mt-0"
+            >
               <div className="box w-[270px] h-[190px] bg-[#40C5A640] m-7 md:mb-12 flex justify-center items-center flex-col rounded shadow-lg">
                 <h1 style={{ fontWeight: "600" }} className="text-[18px]">
                   Contact Us
                 </h1>
-                <h1 className="text-[var(--text-color)]">0327 5365870</h1>
+                <h1 className="text-[var(--text-color)]">0335 5565699</h1>
                 <h1 className="text-[var(--text-color)]">info@darkrew.com</h1>
                 <h1 className="text-[var(--text-color)]">Rawalpindi, PK</h1>
               </div>
