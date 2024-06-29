@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 // import Hamburger from "hamburger-react";
 import { Sling as Hamburger } from "hamburger-react";
+import { IoHome } from "react-icons/io5";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { SiCoursera } from "react-icons/si";
+import { FaPersonCircleQuestion } from "react-icons/fa6";
+import { MdContacts } from "react-icons/md";
+import { FaPersonCircleExclamation } from "react-icons/fa6";
 
 function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
-
   const GoHome = () => {
     window.location.href = "/";
   };
@@ -63,6 +68,13 @@ function Navbar() {
       servicesSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isOpen]);
 
   return (
     <>
@@ -90,7 +102,7 @@ function Navbar() {
               onClick={toggleMenu}
               data-collapse-toggle="navbar-sticky"
               type="button"
-              className="inline-flex items-center w-10 h-10 justify-center text-[var(--text-color)] rounded-lg md:hidden"
+              className="inline-flex items-center w-10 h-10 justify-center text-[var(--text-color)] rounded-lg lg:hidden ml-10 "
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
@@ -99,7 +111,7 @@ function Navbar() {
             </button>
           </div>
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 h-full"
+            className="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1 h-full"
             id="navbar-sticky"
           >
             <ul className="navLinks flex flex-col p-4 md:p-0 mt-4 text-lg border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
@@ -179,52 +191,58 @@ function Navbar() {
         </div>
       </nav>
 
-      <div className="duration-300">
+      <div className="duration-300 mt-20">
         {isOpen && (
           <div
-            className={`mobile-menu duration-300 opacity-100 bg-[var(--main-color)] p-4 h-screen w-screen z-50 fixed text-[var(--text-color)] focus:none`}
+            className={`mobile-menu z-[50] duration-300 bg-white p-4 h-[40%] w-screen fixed text-[var(--heading-color)] focus:none`}
           >
             <NavLink
               to="/"
-              className="block py-2 px-4 text-2xl text-white hover:bg-[var(--text-color)] hover:text-[var(--background-color)] duration-200"
+              className="block py-2 px-4 flex justify-start items-center gap-3 text-2xl hover:bg-[var(--text-color)] duration-200"
               onClick={(closeMenu, GoHome)}
             >
+              <IoHome color={"#40c5a6"} />
               Home
             </NavLink>
             <a
               href="/#services"
-              className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
+              className="block py-2 px-4 flex justify-start items-center gap-3 text-2xl hover:bg-[var(--main-color)]  duration-200"
               onClick={(closeMenu, GoHomeServices)}
             >
+              <RiCustomerService2Fill color={"#40c5a6"} />
               Services
             </a>
             <NavLink
               to="/ourwork"
-              className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
+              className="block py-2 px-4 flex justify-start items-center gap-3 text-2xl focus:text-[var(--background-color)]  duration-200"
               onClick={closeMenu}
             >
+              <SiCoursera color={"#40c5a6"} />
               Courses
             </NavLink>
             <NavLink
               to={"/why-choose-us"}
-              className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
+              className="block py-2 px-4 flex justify-start items-center gap-3 text-2xl focus:text-[var(--background-color)]  duration-200"
               onClick={closeMenu}
             >
+              <FaPersonCircleQuestion color={"#40c5a6"} />
               Why Us
             </NavLink>
             <NavLink
-              className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
+              className="block py-2 px-4 flex justify-start items-center gap-3 text-2xl focus:text-[var(--background-color)]  duration-200"
               onClick={closeMenu}
               to={"/contact-us"}
             >
+              <MdContacts color={"#40c5a6"} />
               Contact Us
             </NavLink>
 
             <NavLink
               to="/aboutus"
-              className="block py-2 px-4 text-2xl text-white focus:text-[var(--background-color)]  duration-200"
+              className="block py-2 px-4 flex justify-start items-center gap-3 text-2xl focus:bg-[var(--background-color)]  duration-200"
               onClick={closeMenu}
             >
+              <FaPersonCircleExclamation color={"#40c5a6"} />
               About Us
             </NavLink>
           </div>

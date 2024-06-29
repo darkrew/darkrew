@@ -1,9 +1,8 @@
 import React from "react";
-import { GrFacebookOption } from "react-icons/gr";
-import { BsInstagram } from "react-icons/bs";
-import { AiFillLinkedin } from "react-icons/ai";
-import { RiTwitterXFill } from "react-icons/ri";
-import { BsBehance } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+import { FiInstagram } from "react-icons/fi";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaSquareBehance } from "react-icons/fa6";
 
 function ContactIcons() {
   return (
@@ -26,29 +25,26 @@ function ContactIcons() {
               We Are Social
             </h1>
           </div>
-          <div className="flex flex-wrap sm:gap-20 gap-8 text-center justify-center items-center w-full text-[var(--main-color)] text-xl">
-            <a href="#" target="__blank" className="mt-12 text-3xl md:text-4xl">
-              <GrFacebookOption />
+          <div className="flex flex-wrap sm:gap-5 gap-8 text-center justify-center items-center w-full text-[var(--main-color)]">
+            <a href="#" target="__blank" className="mt-12">
+              <BsLinkedin size={50} />
             </a>
             <a
               href="https://instagram.com/darkrewpk"
               target="__blank"
-              className="mt-12 text-3xl md:text-4xl"
+              className="mt-12"
             >
-              <BsInstagram />
+              <FiInstagram size={50} />
             </a>
             <a
               href="https://www.linkedin.com/company/darkrew/"
               target="__blank"
-              className="mt-12 text-3xl md:text-4xl"
+              className="mt-12"
             >
-              <AiFillLinkedin />
+              <FaSquareFacebook size={50} />
             </a>
-            <a href="#" target="__blank" className="mt-12 text-3xl md:text-4xl">
-              <RiTwitterXFill />
-            </a>
-            <a href="#" target="__blank" className="mt-12 text-3xl md:text-4xl">
-              <BsBehance />
+            <a href="#" target="__blank" className="mt-12">
+              <FaSquareBehance size={50} />
             </a>
           </div>
         </div>

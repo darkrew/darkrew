@@ -13,7 +13,7 @@ function AboutUs() {
   return (
     <>
       <section
-        className="bg-[var(--background-color)] mt-20 h-[100%] px-0"
+        className="bg-[var(--background-color)] mt-8 md:mt-20 h-[100%] px-0"
         id="team"
       >
         <div className="md:grid md:grid-cols-2 sm:px-10 mb-20 px-10 gap-9 ">

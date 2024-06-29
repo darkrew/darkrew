@@ -1,33 +1,66 @@
 import React from "react";
-import { AiFillInstagram } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaBehanceSquare } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { BsLinkedin } from "react-icons/bs";
+import "react-multi-carousel/lib/styles.css";
 
 function TeamCards({ name, profession, occupation, link }) {
   return (
-    <div className="relative px-10">
-      <div className="max-w-md h-[28rem] bg-white rounded-lg shadow-lg">
-        <a href="#">
+    <div className="px-4">
+      {/* <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4"> */}
+      <div class="md:hover:shadow-xl duration-200 rounded-lg mb-10 pb-3">
+        <a href="#" class="mx-auto">
           <img
-            className="rounded-t-lg overflow-hidden w-[12rem] md:w-[18rem]"
-            src="./Images/Avatar.png"
-            alt=""
+            class="rounded-2xl overflow-hidden drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+            src="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80"
           />
         </a>
-        <div className="p-5 flex justify-between relative">
-          <div className="bg-[var(--main-color)] text-sm custom-team-occupation-border px-6 py-1 text-white absolute left-0 top-24 md:top-12">
-            <p className="headings mr-4">{occupation}</p>
+
+        <div class="text-center mt-6">
+          <h1 class="text-gray-900 text-xl font-bold mb-1">{name}</h1>
+          <h1 class="text-gray-900 text-md font-lightbold mb-1">
+            {profession}
+          </h1>
+
+          <div class="text-gray-700 font-light mb-2">{occupation}</div>
+
+          <div
+            class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300"
+          >
+            <a
+              href={link}
+              target="_blank"
+              class="flex rounded-full hover:bg-blue-50 h-10 w-10"
+            >
+              <i class="text-blue-700 mx-auto mt-2">
+                <BsLinkedin size={25} />
+              </i>
+            </a>
+
+            <a
+              href={link}
+              target="_blank"
+              class="flex rounded-full hover:bg-gray-50 h-10 w-10"
+            >
+              <i class="text-gray-400 mx-auto mt-2">
+                <FaGithub size={25} />
+              </i>
+            </a>
+
+            <a
+              href={link}
+              target="_blank"
+              class="flex rounded-full hover:bg-pink-50 h-10 w-10"
+            >
+              <i class="text-pink-400 mx-auto mt-2">
+                <FaBehanceSquare size={25} />
+              </i>
+            </a>
           </div>
-          <div className="bg-gray-100 text-sm border border-white text-black custom-team-profession-border px-6 py-1 absolute right-0 top-12">
-            <p className="headings font-extralight">{profession}</p>
-          </div>
-        </div>
-        <div className="absolute bottom-0 md:left-[25%] left-[18%] flex gap-3 p-5">
-          <AiFillInstagram size={37} />
-          <AiFillLinkedin size={37} />
-          <FaSquareXTwitter size={35} />
         </div>
       </div>
+      {/* </div> */}
     </div>
   );
 }

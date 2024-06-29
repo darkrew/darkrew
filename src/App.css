@@ -104,6 +104,7 @@ section {
   clip-path: polygon(0 0, 15% 100%, 0 100%, 100% 100%, 100% 0);
 }
 .custom-team-profession-border {
+  /* width: max-content; */
   clip-path: polygon(0 0, 15% 100%, 0 100%, 100% 100%, 100% 0);
 }
 .custom-team-occupation-border {
