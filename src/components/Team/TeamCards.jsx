@@ -8,7 +8,7 @@ function TeamCards({ name, profession, occupation, link }) {
   return (
     <div className="px-4">
       {/* <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4"> */}
-      <div class="md:hover:shadow-xl duration-200 rounded-lg mb-10 pb-3">
+      <div class="md:hover:shadow-xl hover:scale-105 duration-200 rounded-lg mb-10 pb-3 pt-4">
         <a href="#" class="mx-auto">
           <img
             class="rounded-2xl overflow-hidden drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"

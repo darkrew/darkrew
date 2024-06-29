@@ -5,9 +5,9 @@ import transition from "../transition";
 function Home({ heading, paragraph }) {
   return (
     <>
-      <section className="md:mt-12 md:px-7" id="home">
+      <section className=" md:px-7" id="home">
         <div className="md:grid md:grid-cols-2 gap-20">
-          <div className="h-[100%] flex justify-center flex-col">
+          <div className="h-[100%] -mb-12 flex justify-center flex-col">
             <h1 className="mb-2 md:mb-10 text-[var(--heading-color)] headings mt-10 font-bold text-2xl sm:text-xl md:text-2xl lg:text-5xl">
               Where <span className="text-[var(--main-color)]">Ideas</span> Take
               Flight
@@ -25,15 +25,14 @@ function Home({ heading, paragraph }) {
               <ContactModal />
             </div>
           </div>
-          <div className="h-[100%] hidden lg:block">
-            <div className="flex justify-between">
-              <div className="bg-[var(--main-color)] h-48 w-48 rounded-full"></div>
-              <div className="bg-[var(--main-color)] h-48 w-48 rounded-full"></div>
-            </div>
-            <div className="flex">
-              <div className="bg-[var(--main-color)] h-96 w-96 rounded-full"></div>
-              <div className="bg-[var(--main-color)] h-48 w-48 rounded-full"></div>
-            </div>
+          <div className="h-[100%] hidden md:block">
+            <img
+              src="./Images/herodarkrew.png"
+              className="object-cover"
+              width={"90%"}
+              height={"90%"}
+              alt=""
+            />
           </div>
         </div>
       </section>

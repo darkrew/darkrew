@@ -102,7 +102,7 @@ function Navbar() {
               onClick={toggleMenu}
               data-collapse-toggle="navbar-sticky"
               type="button"
-              className="inline-flex items-center w-10 h-10 justify-center text-[var(--text-color)] rounded-lg lg:hidden ml-10 "
+              className="inline-flex pl-3 items-center w-10 h-10 justify-center text-[var(--text-color)] rounded-lg lg:hidden ml-10 "
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >

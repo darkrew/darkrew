@@ -10,13 +10,16 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-center items-center md:justify-between items-start">
             <div className="left flex flex-wrap">
               <img
-                className="-mt-10 hidden lg:block"
+                className="-mt-12 hidden lg:block"
                 src="./Images/Logo/DK-01.png"
                 width={"150px"}
                 height={"150px"}
                 alt=""
               />
-              <div className="flex gap-6 justify-center px-0 md:px-10 text-[var(--text-color)]">
+              <div
+                style={{ textTransform: "uppercase" }}
+                className="flex gap-6 justify-center px-0 md:px-10 text-[var(--text-color)]"
+              >
                 <div className="px-0 md:px-12">
                   <ul>
                     <li>What We Do</li>
