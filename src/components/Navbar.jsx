@@ -95,15 +95,15 @@ function Navbar() {
             />
           </NavLink>
           <div className="flex md:order-2 space-x-3 md:space-x-0">
-            <NavLink to={"/login"}>
-              <button
-                type="button"
-                className="text-white bg-[var(--main-color)] hover:bg-black duration-100 font-bold rounded-lg text-sm px-8 py-2 text-center"
-                onClick={GoAuth}
-              >
-                Join Us
-              </button>
-            </NavLink>
+            {/* <NavLink to={"/login"}> */}
+            <button
+              type="button"
+              className="text-white bg-[var(--main-color)] hover:bg-black duration-100 font-bold rounded-lg text-sm px-8 py-2 text-center"
+              onClick={GoAuth}
+            >
+              Join Us
+            </button>
+            {/* </NavLink> */}
 
             <button
               onClick={toggleMenu}
