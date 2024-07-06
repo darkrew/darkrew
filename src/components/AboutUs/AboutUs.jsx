@@ -5,6 +5,7 @@ import ContactModal from "../Modals/ContactModal";
 import Team from "../Team/Team";
 import { NavLink } from "react-router-dom";
 import transition from "../../transition";
+import Navbar from "../Navbar";
 
 function AboutUs() {
   useEffect(() => {
@@ -12,6 +13,8 @@ function AboutUs() {
   }, []);
   return (
     <>
+      <Navbar />
+
       <section
         className="bg-[var(--background-color)] mt-8 md:mt-20 h-[100%] px-0"
         id="team"

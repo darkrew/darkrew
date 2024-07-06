@@ -8,7 +8,6 @@ function Layout() {
 
   return (
     <>
-      <Navbar />
       <AnimatePresence mode="wait">
         <Outlet key={location.pathname} />
       </AnimatePresence>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Footer from "../Footer";
 import transition from "../../transition";
+import Navbar from "../Navbar";
 
 function ContactUs() {
   useEffect(() => {
@@ -8,6 +9,8 @@ function ContactUs() {
   }, []);
   return (
     <>
+      <Navbar />
+
       <section
         className="px-8 pb-4 mt-10 md:mt-32 h-full w-full bg-[var(--background-color)]"
         id="contactus"

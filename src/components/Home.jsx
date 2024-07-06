@@ -1,10 +1,13 @@
 import React from "react";
 import ContactModal from "./Modals/ContactModal";
 import transition from "../transition";
+import Navbar from "./Navbar";
 
 function Home({ heading, paragraph }) {
   return (
     <>
+      <Navbar />
+
       <section className=" md:px-7" id="home">
         <div className="md:grid md:grid-cols-2 gap-20">
           <div className="h-[100%] -mb-12 flex justify-center flex-col">

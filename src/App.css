@@ -154,3 +154,17 @@ section {
   background-color: #40c5a6;
   transform-origin: top;
 }
+
+.custom-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit (Chrome, Safari) */
+}
+
+.blend-mode-container {
+  background-color: #fff; /* or any other background color you want */
+  display: inline-block; /* ensure the container wraps the image tightly */
+}

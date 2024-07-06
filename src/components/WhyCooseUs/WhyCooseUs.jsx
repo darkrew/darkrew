@@ -7,6 +7,7 @@ import Record from "./svg/Record";
 import { NavLink } from "react-router-dom";
 import Footer from "../Footer";
 import ContactUs from "../Contact/ContactUs";
+import Navbar from "../Navbar";
 
 function WhyCooseUs() {
   useEffect(() => {
@@ -14,6 +15,8 @@ function WhyCooseUs() {
   }, []);
   return (
     <div>
+      <Navbar />
+
       <section className="" id="whyUs">
         <div className="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6">
           <div className="text-center mb-8 lg:mb-16">

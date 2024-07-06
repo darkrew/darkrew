@@ -3,10 +3,13 @@ import ContactUs from "../Contact/ContactUs";
 import Footer from "../Footer";
 import ContactModal from "../Modals/ContactModal";
 import transition from "../../transition";
+import Navbar from "../Navbar";
 
 function OurWork() {
   return (
     <>
+      <Navbar />
+
       <section
         className="bg-[var(--background-color)] h-[100%] mt-24 px-0"
         id="team"

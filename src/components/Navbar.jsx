@@ -15,6 +15,9 @@ function Navbar() {
   const GoHome = () => {
     window.location.href = "/";
   };
+  const GoAuth = () => {
+    window.location.href = "/login";
+  };
   const [scrollToServices, setScrollToServices] = useState(false);
 
   const GoHomeServices = () => {
@@ -92,12 +95,16 @@ function Navbar() {
             />
           </NavLink>
           <div className="flex md:order-2 space-x-3 md:space-x-0">
-            <button
-              type="button"
-              className="text-white bg-[var(--main-color)] focus:ring-4 focus:outline-none focus:ring-[var(--main-color)] font-bold rounded-lg text-sm px-8 py-2 text-center"
-            >
-              Join Us
-            </button>
+            <NavLink to={"/login"}>
+              <button
+                type="button"
+                className="text-white bg-[var(--main-color)] hover:bg-black duration-100 font-bold rounded-lg text-sm px-8 py-2 text-center"
+                onClick={GoAuth}
+              >
+                Join Us
+              </button>
+            </NavLink>
+
             <button
               onClick={toggleMenu}
               data-collapse-toggle="navbar-sticky"
