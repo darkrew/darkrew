@@ -26,25 +26,29 @@ function ContactIcons() {
             </h1>
           </div>
           <div className="flex flex-wrap sm:gap-5 gap-8 text-center justify-center items-center w-full text-[var(--main-color)]">
-            <a href="#" target="__blank" className="mt-12">
+            <a
+              href="https://www.linkedin.com/company/darkrew"
+              target="__blank"
+              className="mt-12"
+            >
               <BsLinkedin size={50} />
             </a>
             <a
-              href="https://instagram.com/darkrewpk"
+              href="https://www.instagram.com/darkrew.official"
               target="__blank"
               className="mt-12"
             >
               <FiInstagram size={50} />
             </a>
             <a
-              href="https://www.linkedin.com/company/darkrew/"
+              href="https://www.behance.net/darkrew"
               target="__blank"
               className="mt-12"
             >
-              <FaSquareFacebook size={50} />
+              <FaSquareBehance size={50} />
             </a>
             <a href="#" target="__blank" className="mt-12">
-              <FaSquareBehance size={50} />
+              <FaSquareFacebook size={50} />
             </a>
           </div>
         </div>

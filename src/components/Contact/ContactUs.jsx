@@ -12,7 +12,7 @@ function ContactUs() {
       <Navbar />
 
       <section
-        className="px-8 pb-4 mt-10 md:mt-32 h-full w-full bg-[var(--background-color)]"
+        className="px-8 pb-4 mt-32 h-full w-full bg-[var(--background-color)]"
         id="contactus"
       >
         <div className="text-center w-full contactForm">

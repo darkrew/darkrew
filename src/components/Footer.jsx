@@ -46,8 +46,12 @@ function Footer() {
                 <h1 style={{ fontWeight: "600" }} className="text-[18px]">
                   Contact Us
                 </h1>
-                <h1 className="text-[var(--text-color)]">0335 5565699</h1>
-                <h1 className="text-[var(--text-color)]">info@darkrew.com</h1>
+                <h1 className="text-[var(--text-color)]">
+                  <a href="tel:03355565699">0335 5565699</a>
+                </h1>
+                <h1 className="text-[var(--text-color)]">
+                  <a href="mailto:info@darkrew.com">info@darkrew.com</a>
+                </h1>
                 <h1 className="text-[var(--text-color)]">Rawalpindi, PK</h1>
               </div>
             </div>

@@ -67,34 +67,47 @@ function Team() {
           <Slider {...settings} className="mt-10 overflow-hidden">
             <div className="px-2">
               <TeamCards
+                pic="./Images/usman.jpeg"
                 name="Usman Muaz"
                 profession="Flutter Dev"
                 occupation="Founder & CEO"
-                link="https://www.google.com"
+                linkedin="https://pk.linkedin.com/in/usmanmuaz"
+                github="https://github.com/usmanmuaz"
+                behance="https://www.behance.net/usmanmuaz"
+                instagram="https://www.instagram.com/iusmanmuaz"
               />
             </div>
             <div className="px-2">
               <TeamCards
+                pic="./Images/tayyab.jpeg"
                 name="Muhammad Tayyab"
                 profession="Full Stack Dev"
                 occupation="Co-Founder"
-                link="https://www.youtube.com"
+                linkedin="https://www.linkedin.com/in/muhammad-tayyab-656033242/"
+                github="https://github.com/muhammad-tayyab604"
+                instagram="https://www.instagram.com/muhammad_tayyab1122"
               />
             </div>
             <div className="px-2">
               <TeamCards
-                name="Muhammad Tayyab"
-                profession="Full Stack Dev"
-                occupation="Co-Founder"
-                link="https://www.youtube.com"
+                pic="./Images/sheraz.jpeg"
+                name="Sheraz Akram"
+                profession="Flutter Dev"
+                occupation="Software Engineer"
+                linkedin="https://www.linkedin.com/in/isherazakram/"
+                // github="https://github.com/muhammad-tayyab604"
+                // instagram="https://www.instagram.com/muhammad_tayyab1122"
               />
             </div>
             <div className="px-2">
               <TeamCards
-                name="Muhammad Tayyab"
-                profession="Full Stack Dev"
-                occupation="Co-Founder"
-                link="https://www.youtube.com"
+                pic="./Images/arsal.jpeg"
+                name="Arsal Mehboob"
+                profession="HR Manager"
+                occupation="Human Resource"
+                linkedin="https://www.linkedin.com/in/isherazakram/"
+                // github="https://github.com/muhammad-tayyab604"
+                // instagram="https://www.instagram.com/muhammad_tayyab1122"
               />
             </div>
           </Slider>

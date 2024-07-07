@@ -17,7 +17,7 @@ function WhyCooseUs() {
     <div>
       <Navbar />
 
-      <section className="" id="whyUs">
+      <section className="mt-16" id="whyUs">
         <div className="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6">
           <div className="text-center mb-8 lg:mb-16">
             <h2 className="mb-4 headings text-[var(--heading-color)] tracking-tight font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">

@@ -25,7 +25,15 @@ function Home({ heading, paragraph }) {
               innovators to come together and turn their ideas into reality
             </h1>
             <div className="mt-4 sm:mt-32 sm:mb-0 mb-20">
-              <ContactModal />
+              {/* <ContactModal /> */}
+              <a
+                href="#contactus"
+                className="border border-[var(--main-color)] text-[var(--main-color)] focus:bg-[var(--main-color)] focus:text-[var(--backround-color)] hover:bg-[var(--main-color)] hover:text-gray-100 font-semibold px-12 py-2 rounded-lg outline-none duration-75"
+                type="button"
+                // onClick={() => setShowModal(true)}
+              >
+                Contact Us
+              </a>
             </div>
           </div>
           <div className="h-[100%] hidden md:block">

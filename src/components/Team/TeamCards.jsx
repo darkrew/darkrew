@@ -2,17 +2,28 @@ import React from "react";
 import { FaBehanceSquare } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+
 import "react-multi-carousel/lib/styles.css";
 
-function TeamCards({ name, profession, occupation, link }) {
+function TeamCards({
+  name,
+  profession,
+  occupation,
+  linkedin,
+  github,
+  instagram,
+  behance,
+  pic,
+}) {
   return (
     <div className="px-4">
       {/* <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4"> */}
       <div class="md:hover:shadow-xl hover:scale-105 duration-200 rounded-lg mb-10 pb-3 pt-4">
-        <a href="#" class="mx-auto">
+        <a href="#" class="mx-auto flex justify-center">
           <img
-            class="rounded-2xl overflow-hidden drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-            src="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80"
+            class="rounded-2xl object-cover  overflow-hidden drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+            src={pic}
           />
         </a>
 
@@ -29,7 +40,7 @@ function TeamCards({ name, profession, occupation, link }) {
                                 transition-opacity duration-300"
           >
             <a
-              href={link}
+              href={linkedin}
               target="_blank"
               class="flex rounded-full hover:bg-blue-50 h-10 w-10"
             >
@@ -39,7 +50,7 @@ function TeamCards({ name, profession, occupation, link }) {
             </a>
 
             <a
-              href={link}
+              href={github}
               target="_blank"
               class="flex rounded-full hover:bg-gray-50 h-10 w-10"
             >
@@ -49,12 +60,21 @@ function TeamCards({ name, profession, occupation, link }) {
             </a>
 
             <a
-              href={link}
+              href={behance}
               target="_blank"
               class="flex rounded-full hover:bg-pink-50 h-10 w-10"
             >
               <i class="text-pink-400 mx-auto mt-2">
                 <FaBehanceSquare size={25} />
+              </i>
+            </a>
+            <a
+              href={instagram}
+              target="_blank"
+              class="flex rounded-full hover:bg-pink-50 h-10 w-10"
+            >
+              <i class="text-pink-600 mx-auto mt-2">
+                <BsInstagram size={25} />
               </i>
             </a>
           </div>

@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import WhyCooseUs from "../WhyCooseUs/WhyCooseUs";
 import ContactModal from "../Modals/ContactModal";
 import Team from "../Team/Team";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import transition from "../../transition";
 import Navbar from "../Navbar";
 
@@ -34,7 +34,16 @@ function AboutUs() {
               the boundaries in the ever-evolving technology landscape
             </h1>
             <div className="mt-4 sm:mt-32 sm:mb-0 mb-20">
-              <ContactModal />
+              {/* <ContactModal /> */}
+              <Link
+                to={"/contact-us"}
+                // href="#contactus"
+                className="border border-[var(--main-color)] text-[var(--main-color)] focus:bg-[var(--main-color)] focus:text-[var(--backround-color)] hover:bg-[var(--main-color)] hover:text-gray-100 font-semibold px-12 py-2 rounded-lg outline-none duration-75"
+                type="button"
+                // onClick={() => setShowModal(true)}
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
           <div className="h-[100%]">
